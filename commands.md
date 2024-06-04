@@ -13,3 +13,21 @@ You can enable the plugin in VS Code by:
 1. Opening the command palette (Ctrl/⌘ + Shift + P)
 2. Searching for "TypeScript: Select TypeScript Version"
 3. Selecting "Use Workspace Version"
+
+```js
+    /**
+     * Next.js will generate a link definition in .next/types that contains information
+     * about all existing routes in your application, which TypeScript can then use to
+     * provide feedback in your editor about invalid links.
+     *
+     * Currently, experimental support includes any string literal, including dynamic segments.
+     * For non-literal strings, you currently need to manually cast the href with as Route:
+     *
+     * import type { Route } from 'next';
+     */
+    replace(`${pathname}?${params.toString()}` as Route)
+```
+
+## Including debounce npm library
+
+`npm i use-debounce`
